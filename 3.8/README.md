@@ -120,12 +120,12 @@ These aren't really necessary if you remember to always keep *aosp/dev* and
 *aosp/master* synchronized otherwise, but very often someone will forget to
 merge back a change.
 
-  1. Grab the squashed commit that went into *aosp/master* and mark it
-  committed to *aosp/dev* too.
+   1. Grab the squashed commit that went into *aosp/master* and mark it
+   committed to *aosp/dev* too.
 
-     **Note**: If there were changes to *aosp/master* before the squashed
-     commit, grab those changes (using step 2), before applying this step,
-     and finally repeat step 2 for changes after the squashed commit.
+      **Note**: If there were changes to *aosp/master* before the squashed
+      commit, grab those changes (using step 2), before applying this step,
+      and finally repeat step 2 for changes after the squashed commit.
 
           git branch -D clean_master
           git checkout -b clean_master <SHA_FOR_SQUASH>
@@ -134,8 +134,8 @@ merge back a change.
           git push aosp refs/heads/working_dev:refs/heads/dev
           git branch -D clean_master
 
-  2. Grab all outstanding changes that went into *aosp/master* and put them
-  into *aosp/dev* too.
+   2. Grab all outstanding changes that went into *aosp/master* and put them
+   into *aosp/dev* too.
 
           git branch -D clean_master
           git checkout -b clean_master aosp/master
