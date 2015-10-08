@@ -8,40 +8,40 @@ Platform Projects
 **Branch**: *aosp/dev*
 
 * This branch tracks LLVM upstream directly and contains our Android-specific
-patches that do not exist in upstream.
+  patches that do not exist in upstream.
 
 **Branch**: *aosp/master*
 
 * This branch receives updates from the *aosp/dev* branch as a squashed single
-commit.
-Any patches submitted here need to be replayed in *aosp/dev* as well for
-consistency with future rebases.
+  commit.
+  Any patches submitted here need to be replayed in *aosp/dev* as well for
+  consistency with future rebases.
 
 #### external/clang
 **Branch**: *aosp/dev*
 
 * This branch tracks Clang upstream directly and contains our Android-specific
-patches that do not exist in upstream.
+  patches that do not exist in upstream.
 
 **Branch**: *aosp/master*
 
 * This branch receives updates from the *aosp/dev* branch as a squashed single
-commit.
-Any patches submitted here need to be replayed in *aosp/dev* as well for
-consistency with future rebases.
+  commit.
+  Any patches submitted here need to be replayed in *aosp/dev* as well for
+  consistency with future rebases.
 
 #### external/compiler-rt
 **Branch**: *aosp/dev*
 
 * This branch tracks compiler-rt upstream directly and contains our
-Android-specific patches that do not exist in upstream.
+  Android-specific patches that do not exist in upstream.
 
 **Branch**: *aosp/master*
 
 * This branch receives updates from the *aosp/dev* branch as a squashed single
-commit.
-Any patches submitted here need to be replayed in *aosp/dev* as well for
-consistency with future rebases.
+  commit.
+  Any patches submitted here need to be replayed in *aosp/dev* as well for
+  consistency with future rebases.
 
 
 **Note**: Similar branching strategies can be used for **external/libcxx** and
@@ -110,18 +110,18 @@ LLVM 3.8 era rebase process
 Loop over llvm, clang, compiler-rt (in this order):
 
 1. We are working from a separate untracked/merged branch called *aosp/dev*,
-so we can’t really use repo start.
+   so we can’t really use repo start.
 
         git branch -D working_dev
         git checkout -b working_dev aosp/dev
 
 2. **OPTIONAL FIXUPS**.
-These aren't really necessary if you remember to always keep *aosp/dev* and
-*aosp/master* synchronized otherwise, but very often someone will forget to
-merge back a change.
+   These aren't really necessary if you remember to always keep *aosp/dev* and
+   *aosp/master* synchronized otherwise, but very often someone will forget to
+   merge back a change.
 
    1. Grab the squashed commit that went into *aosp/master* and mark it
-   committed to *aosp/dev* too.
+      committed to *aosp/dev* too.
 
       **Note**: If there were changes to *aosp/master* before the squashed
       commit, grab those changes (using step 2), before applying this step,
@@ -135,7 +135,7 @@ merge back a change.
           git branch -D clean_master
 
    2. Grab all outstanding changes that went into *aosp/master* and put them
-   into *aosp/dev* too.
+      into *aosp/dev* too.
 
           git branch -D clean_master
           git checkout -b clean_master aosp/master
@@ -145,7 +145,7 @@ merge back a change.
           git branch -D clean_master
 
 3. Merge the upstream branch.
-Use `git log upstream/master` to browse upstream commits and find a SHA.
+   Use `git log upstream/master` to browse upstream commits and find a SHA.
 
         git merge <upstream_sha>
 
@@ -176,8 +176,8 @@ Use `git log upstream/master` to browse upstream commits and find a SHA.
         git checkout -b clean_master aosp/master
         git checkout working_dev
 
-     Use -s ours to ensure that we skip the squashed set of changes
-     If/when we forget this, we have to do it later
+    Use -s ours to ensure that we skip the squashed set of changes
+    If/when we forget this, we have to do it later
 
         git merge -s ours clean_master
         git push aosp refs/heads/working_dev:refs/heads/dev
