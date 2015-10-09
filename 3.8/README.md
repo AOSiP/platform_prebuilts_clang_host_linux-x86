@@ -120,12 +120,12 @@ Loop over llvm, clang, compiler-rt (in this order):
    *aosp/master* synchronized otherwise, but very often someone will forget to
    merge back a change.
 
-   1. Grab the squashed commit that went into *aosp/master* and mark it
-      committed to *aosp/dev* too.
+  1. Grab the squashed commit that went into *aosp/master* and mark it
+     committed to *aosp/dev* too.
 
-      **Note**: If there were changes to *aosp/master* before the squashed
-      commit, grab those changes (using step 2), before applying this step,
-      and finally repeat step 2 for changes after the squashed commit.
+     **Note**: If there were changes to *aosp/master* before the squashed
+     commit, grab those changes (using step 2), before applying this step,
+     and finally repeat step 2 for changes after the squashed commit.
 
           git branch -D clean_master
           git checkout -b clean_master <SHA_FOR_SQUASH>
@@ -134,8 +134,8 @@ Loop over llvm, clang, compiler-rt (in this order):
           git push aosp refs/heads/working_dev:refs/heads/dev
           git branch -D clean_master
 
-   2. Grab all outstanding changes that went into *aosp/master* and put them
-      into *aosp/dev* too.
+  2. Grab all outstanding changes that went into *aosp/master* and put them
+     into *aosp/dev* too.
 
           git branch -D clean_master
           git checkout -b clean_master aosp/master
@@ -176,8 +176,8 @@ Loop over llvm, clang, compiler-rt (in this order):
         git checkout -b clean_master aosp/master
         git checkout working_dev
 
-    Use -s ours to ensure that we skip the squashed set of changes
-    If/when we forget this, we have to do it later
+    Use `-s ours` to ensure that we skip the squashed set of changes.
+    If/when we forget this, we have to do it later.
 
         git merge -s ours clean_master
         git push aosp refs/heads/working_dev:refs/heads/dev
@@ -289,20 +289,27 @@ Depending on the changes in LLVM, there might be updates to other projects as
 well.
 
 * External projects
+
   * **external/clang**
   * **external/compiler-rt**
   * **external/llvm**
   * **frameworks/compile/mclinker**
+
 * RenderScript projects
+
   * **frameworks/compile/libbcc**
   * **frameworks/compile/slang**
   * **frameworks/rs**
+
 * Prebuilts
+
   * **prebuilts/clang/host/darwin-x86/**
   * **prebuilts/clang/host/linux-x86/**
   * **prebuilts/clang/host/windows-x86/**
   * **prebuilts/sdk**
+
 * CTS tests
+
   * **cts/tests/tests/renderscript**
   * **cts/tests/tests/renderscriptlegacy**
   * **cts/tests/tests/rscpp**
