@@ -1,10 +1,12 @@
 #!/bin/bash -e
 
 echo Copying sanitizer headers
-cp -a ${ANDROID_BUILD_TOP}/external/compiler-rt/include/sanitizer lib/clang/*/include/
+CLANGVER=$(echo lib/clang/* | cut -d ' ' -f 1)
+INCDEST=${CLANGVER}/include
+cp -a ${ANDROID_BUILD_TOP}/external/compiler-rt/include/sanitizer ${INCDEST}
 
 echo Copying sanitizer libraries
-LIBDEST=$(echo lib/clang/*)/lib/linux
+LIBDEST=${CLANGVER}/lib/linux
 OBJ32=${ANDROID_HOST_OUT}/obj32/STATIC_LIBRARIES
 OBJ64=${ANDROID_HOST_OUT}/obj/STATIC_LIBRARIES
 
@@ -25,3 +27,6 @@ for lib in $LIBS64; do
 
   cp -a ${OBJ64}/${lib}_intermediates/${lib}.a ${lib64}
 done
+
+cp -a ${ANDROID_BUILD_TOP}/out/target/product/generic/system/lib/libclang_rt.asan-arm-android.so ${LIBDEST}
+cp -a ${ANDROID_BUILD_TOP}/out/target/product/generic_arm64/system/lib64/libclang_rt.asan-arm64-android.so ${LIBDEST}
