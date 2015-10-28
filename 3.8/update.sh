@@ -27,6 +27,10 @@ echo Copying libc++.so
 cp -a ${ANDROID_HOST_OUT}/lib/libc++.so lib/
 cp -a ${ANDROID_HOST_OUT}/lib64/libc++.so lib64/
 
+# Copy LLVMgold.so and dependents
+cp -a ${ANDROID_HOST_OUT}/lib64/LLVMgold.so lib/
+cp -a ${ANDROID_HOST_OUT}/lib64/libLLVM.so lib64/
+
 # Copy header files
 #rm -rf lib/clang/*/include/*
 rm -rf lib/clang/*
@@ -78,4 +82,3 @@ sh update-sanitizers.sh
 cd lib/clang/
 ln -s ${MAJOR}.${MINOR} ${MAJOR}.${MINOR}.${PATCH}
 cd -
-
