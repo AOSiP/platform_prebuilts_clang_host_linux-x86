@@ -13,6 +13,25 @@ for b in bin/*; do
   fi
 done
 
+# Copy license files.
+# Need to make sure we get all the MODULE_LICENSE_* files used and concatenate
+# all the NOTICE files (all of which differ slightly).
+cp -a ${ANDROID_BUILD_TOP}/external/clang/MODULE_LICENSE_* .
+cp -a ${ANDROID_BUILD_TOP}/external/llvm/MODULE_LICENSE_* .
+cp -a ${ANDROID_BUILD_TOP}/external/compiler-rt/MODULE_LICENSE_* .
+cp -a ${ANDROID_BUILD_TOP}/external/libcxx/MODULE_LICENSE_* .
+cp -a ${ANDROID_BUILD_TOP}/external/libcxxabi/MODULE_LICENSE_* .
+
+cp -a ${ANDROID_BUILD_TOP}/external/clang/NOTICE .
+echo >> NOTICE
+cat ${ANDROID_BUILD_TOP}/external/llvm/NOTICE >> NOTICE
+echo >> NOTICE
+cat ${ANDROID_BUILD_TOP}/external/compiler-rt/NOTICE >> NOTICE
+echo >> NOTICE
+cat ${ANDROID_BUILD_TOP}/external/libcxx/NOTICE >> NOTICE
+echo >> NOTICE
+cat ${ANDROID_BUILD_TOP}/external/libcxxabi/NOTICE >> NOTICE
+
 # Copy static analyzer scripts.
 echo Copying static analyzer tools
 rm -rf tools/*
