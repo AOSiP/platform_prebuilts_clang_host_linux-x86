@@ -17,12 +17,14 @@
 LOCAL_PATH := $(call my-dir)
 
 # Use these prebuilts unless we are actually building from a newly rebased
-# LLVM. This variable should be set as part of the build_profile_rt.sh script.
+# LLVM. This variable is set by external/clang/build.py.
 ifneq (true,$(FORCE_BUILD_SANITIZER_SHARED_OBJECTS))
+
+libclang_dir := $(LLVM_PREBUILTS_VERSION)/lib/clang/3.8
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libclang_rt.asan-arm-android
-LOCAL_SRC_FILES := lib/clang/3.8/lib/linux/$(LOCAL_MODULE).so
+LOCAL_SRC_FILES := $(libclang_dir)/lib/linux/$(LOCAL_MODULE).so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_TARGET_ARCH := arm arm64
@@ -33,7 +35,7 @@ include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libclang_rt.asan-arm64-android
-LOCAL_SRC_FILES := lib/clang/3.8/lib/linux/$(LOCAL_MODULE).so
+LOCAL_SRC_FILES := $(libclang_dir)/lib/linux/$(LOCAL_MODULE).so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_TARGET_ARCH := arm64
