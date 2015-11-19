@@ -34,7 +34,7 @@ LOCAL_SANITIZE := never
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := libclang_rt.asan-arm64-android
+LOCAL_MODULE := libclang_rt.asan-aarch64-android
 LOCAL_SRC_FILES := $(libclang_dir)/lib/linux/$(LOCAL_MODULE).so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
