@@ -20,7 +20,7 @@ LOCAL_PATH := $(call my-dir)
 # LLVM. This variable is set by external/clang/build.py.
 ifneq (true,$(FORCE_BUILD_SANITIZER_SHARED_OBJECTS))
 
-libclang_dir := $(LLVM_PREBUILTS_VERSION)/lib/clang/3.8
+libclang_dir := $(LLVM_PREBUILTS_VERSION)/lib64/clang/3.8
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libclang_rt.asan-arm-android
