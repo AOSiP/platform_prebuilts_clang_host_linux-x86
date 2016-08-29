@@ -1,0 +1,17 @@
+#!/usr/bin/python
+
+import os
+import sys
+
+flags_to_append = []
+flags_to_insert = []
+
+myargs = sys.argv[1:]
+
+myargs = flags_to_insert + myargs + flags_to_append
+
+real_compiler = sys.argv[0] + '.real'
+
+myargs = [real_compiler] + myargs
+
+os.execv(real_compiler, myargs)
