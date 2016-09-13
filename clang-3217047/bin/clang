@@ -11,7 +11,21 @@ myargs = sys.argv[1:]
 myargs = flags_to_insert + myargs + flags_to_append
 
 real_compiler = sys.argv[0] + '.real'
+argv0 = real_compiler
 
-myargs = [real_compiler] + myargs
+def get_gomacc_command():
+  """Return the gomacc command if it is found in $GOMACC_PATH."""
+  gomacc = os.environ.get('GOMACC_PATH')
+  if gomacc and os.path.isfile(gomacc):
+    return gomacc
+  return None
 
-os.execv(real_compiler, myargs)
+execargs = []
+gomacc = get_gomacc_command()
+if gomacc:
+  argv0 = gomacc
+  execargs += [gomacc]
+
+execargs += [real_compiler] + myargs
+
+os.execv(argv0, execargs)
