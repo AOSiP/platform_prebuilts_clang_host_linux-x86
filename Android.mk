@@ -97,17 +97,17 @@ LOCAL_SYSTEM_SHARED_LIBRARIES :=
 LOCAL_CXX_STL := none
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE := libclang_rt.ubsan_standalone-x86_64-android
-LOCAL_SRC_FILES := $(libclang_dir)/lib/linux/$(LOCAL_MODULE).so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_TARGET_ARCH := x86_64
-LOCAL_MODULE_PATH_64 := $(TARGET_OUT)/lib64
-LOCAL_SANITIZE := never
-LOCAL_SYSTEM_SHARED_LIBRARIES :=
-LOCAL_CXX_STL := none
-include $(BUILD_PREBUILT)
+#include $(CLEAR_VARS)
+#LOCAL_MODULE := libclang_rt.ubsan_standalone-x86_64-android
+#LOCAL_SRC_FILES := $(libclang_dir)/lib/linux/$(LOCAL_MODULE).so
+#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#LOCAL_MODULE_SUFFIX := .so
+#LOCAL_MODULE_TARGET_ARCH := x86_64
+#LOCAL_MODULE_PATH_64 := $(TARGET_OUT)/lib64
+#LOCAL_SANITIZE := never
+#LOCAL_SYSTEM_SHARED_LIBRARIES :=
+#LOCAL_CXX_STL := none
+#include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE := libclang_rt.ubsan_standalone-mips-android
