@@ -27,7 +27,8 @@ def ProcessArgFile(arg_file):
 
 class CompilerWrapper():
   def __init__(self, argv):
-    self.args = argv
+    self.argv0_current = argv[0]
+    self.args = argv[1:]
     self.execargs = []
     self.real_compiler = None
     self.argv0 = None
@@ -39,7 +40,7 @@ class CompilerWrapper():
 
   def set_real_compiler(self):
     """Find the real compiler with the absolute path."""
-    compiler_path = os.path.dirname(os.path.abspath(__file__))
+    compiler_path = os.path.dirname(self.argv0_current)
     if os.path.islink(__file__):
       compiler = os.path.basename(os.readlink(__file__))
     else:
@@ -101,7 +102,7 @@ class CompilerWrapper():
 
 
 def main(argv):
-  cw = CompilerWrapper(argv[1:])
+  cw = CompilerWrapper(argv)
   if BISECT_STAGE and BISECT_STAGE in bisect_driver.VALID_MODES and '-o' in argv:
     cw.bisect()
   else:
