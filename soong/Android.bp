@@ -14,13 +14,17 @@
 // limitations under the License.
 //
 
-libfuzzer_prebuilt_library_static {
-    name: "libFuzzer",
-    sanitize: {
-        never: true,
-    },
+bootstrap_go_package {
+    name: "soong-libfuzzer",
+    pkgPath: "android/soong/prebuilts/clang/host/linux-x86",
+    deps: [
+        "blueprint",
+        "soong-android",
+        "soong-cc",
+        "soong-cc-config"
+    ],
+    srcs: [
+        "libfuzzer.go",
+    ],
+    pluginFor: ["soong_build"],
 }
-
-subdirs = [
-    "soong",
-]
