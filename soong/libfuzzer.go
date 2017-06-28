@@ -20,7 +20,6 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/google/blueprint"
 	"github.com/google/blueprint/proptools"
 
 	"android/soong/android"
@@ -100,7 +99,7 @@ func libfuzzerPrebuiltLibraryStatic(ctx android.LoadHookContext) {
 	ctx.AppendProperties(p)
 }
 
-func libfuzzerPrebuiltLibraryStaticFactory() (blueprint.Module, []interface{}) {
+func libfuzzerPrebuiltLibraryStaticFactory() android.Module {
 	module, _ := cc.NewPrebuiltStaticLibrary(android.HostAndDeviceSupported)
 	android.AddLoadHook(module, libfuzzerPrebuiltLibraryStatic)
 	return module.Init()
