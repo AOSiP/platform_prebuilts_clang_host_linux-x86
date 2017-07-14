@@ -14,11 +14,12 @@
 // limitations under the License.
 //
 
-package libfuzzer
+package clangprebuilts
 
 import (
 	"path"
 	"path/filepath"
+	"strings"
 
 	"github.com/google/blueprint/proptools"
 
@@ -27,13 +28,48 @@ import (
 	"android/soong/cc/config"
 )
 
-// This module is used to generate libfuzzer static libraries. When
+// This module is used to generate libfuzzer static libraries and libclang_rt.* shared libraries. When
 // LLVM_PREBUILTS_VERSION and LLVM_RELEASE_VERSION are set, the library will
 // generated from the given path.
 
 func init() {
 	android.RegisterModuleType("libfuzzer_prebuilt_library_static",
 		libfuzzerPrebuiltLibraryStaticFactory)
+	android.RegisterModuleType("libclang_rt_prebuilt_library_shared",
+		libClangRtPrebuiltLibrarySharedFactory)
+}
+
+func getClangDirs(ctx android.LoadHookContext) (libDir string, headerDir string) {
+	clangDir := path.Join(
+		"./",
+		ctx.AConfig().GetenvWithDefault("LLVM_PREBUILTS_VERSION", config.ClangDefaultVersion),
+	)
+	headerDir = path.Join(clangDir, "prebuilt_include", "llvm", "lib", "Fuzzer")
+	releaseVersion := ctx.AConfig().GetenvWithDefault("LLVM_RELEASE_VERSION",
+		config.ClangDefaultShortVersion)
+	libDir = path.Join(clangDir, "lib64", "clang", releaseVersion, "lib", "linux")
+	return
+}
+
+type archProps struct {
+	Android_arm struct {
+		Srcs []string
+	}
+	Android_arm64 struct {
+		Srcs []string
+	}
+	Android_mips struct {
+		Srcs []string
+	}
+	Android_mips64 struct {
+		Srcs []string
+	}
+	Android_x86 struct {
+		Srcs []string
+	}
+	Android_x86_64 struct {
+		Srcs []string
+	}
 }
 
 func libfuzzerPrebuiltLibraryStatic(ctx android.LoadHookContext) {
@@ -52,38 +88,12 @@ func libfuzzerPrebuiltLibraryStatic(ctx android.LoadHookContext) {
 		}
 	}
 
-	clangDir := path.Join(
-		"./",
-		ctx.AConfig().GetenvWithDefault("LLVM_PREBUILTS_VERSION", config.ClangDefaultVersion),
-	)
-	headerDir := path.Join(clangDir, "prebuilt_include", "llvm", "lib", "Fuzzer")
-	releaseVersion := ctx.AConfig().GetenvWithDefault("LLVM_RELEASE_VERSION",
-		config.ClangDefaultShortVersion)
-	libDir := path.Join(clangDir, "lib64", "clang", releaseVersion, "lib", "linux")
+	libDir, headerDir := getClangDirs(ctx)
 
 	type props struct {
-		Enabled *bool
+		Enabled             *bool
 		Export_include_dirs []string
-		Target              struct {
-			Android_arm struct {
-				Srcs []string
-			}
-			Android_arm64 struct {
-				Srcs []string
-			}
-			Android_mips struct {
-				Srcs []string
-			}
-			Android_mips64 struct {
-				Srcs []string
-			}
-			Android_x86 struct {
-				Srcs []string
-			}
-			Android_x86_64 struct {
-				Srcs []string
-			}
-		}
+		Target              archProps
 	}
 
 	p := &props{}
@@ -99,8 +109,49 @@ func libfuzzerPrebuiltLibraryStatic(ctx android.LoadHookContext) {
 	ctx.AppendProperties(p)
 }
 
+func libClangRtPrebuiltLibraryShared(ctx android.LoadHookContext) {
+	if ctx.AConfig().IsEnvTrue("FORCE_BUILD_SANITIZER_SHARED_OBJECTS") {
+		return
+	}
+
+	libDir, _ := getClangDirs(ctx)
+
+	type props struct {
+		Srcs []string
+		System_shared_libs []string
+		Sanitize struct {
+			Never bool
+		}
+		Strip struct {
+			None bool
+		}
+		Pack_relocations *bool
+		Stl *string
+	}
+
+	p := &props{}
+
+	name := strings.Replace(ctx.ModuleName(), "prebuilt_", "", 1)
+
+	p.Srcs = []string{path.Join(libDir, name+".so")}
+	p.System_shared_libs = []string{}
+	p.Sanitize.Never = true
+	p.Strip.None = true
+	disable := false
+	p.Pack_relocations = &disable
+	none := "none"
+	p.Stl = &none
+	ctx.AppendProperties(p)
+}
+
 func libfuzzerPrebuiltLibraryStaticFactory() android.Module {
 	module, _ := cc.NewPrebuiltStaticLibrary(android.HostAndDeviceSupported)
 	android.AddLoadHook(module, libfuzzerPrebuiltLibraryStatic)
+	return module.Init()
+}
+
+func libClangRtPrebuiltLibrarySharedFactory() android.Module {
+	module, _ := cc.NewPrebuiltSharedLibrary(android.DeviceSupported)
+	android.AddLoadHook(module, libClangRtPrebuiltLibraryShared)
 	return module.Init()
 }
