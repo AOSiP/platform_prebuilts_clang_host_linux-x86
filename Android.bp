@@ -210,7 +210,7 @@ libclang_rt_prebuilt_library_static {
 }
 
 libclang_rt_prebuilt_library_static {
-    name: "libclang_rt.profile-mips-android",
+    name: "libclang_rt.profile-mipsel-android",
     enabled: false,
     arch: {
         mips: {
@@ -220,7 +220,7 @@ libclang_rt_prebuilt_library_static {
 }
 
 libclang_rt_prebuilt_library_static {
-    name: "libclang_rt.profile-mips64-android",
+    name: "libclang_rt.profile-mips64el-android",
     enabled: false,
     arch: {
         mips64: {
