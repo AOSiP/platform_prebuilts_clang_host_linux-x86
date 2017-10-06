@@ -37,6 +37,8 @@ func init() {
 		libfuzzerPrebuiltLibraryStaticFactory)
 	android.RegisterModuleType("libclang_rt_prebuilt_library_shared",
 		libClangRtPrebuiltLibrarySharedFactory)
+	android.RegisterModuleType("libclang_rt_prebuilt_library_static",
+		libClangRtPrebuiltLibraryStaticFactory)
 }
 
 func getClangDirs(ctx android.LoadHookContext) (libDir string, headerDir string) {
@@ -144,6 +146,20 @@ func libClangRtPrebuiltLibraryShared(ctx android.LoadHookContext) {
 	ctx.AppendProperties(p)
 }
 
+func libClangRtPrebuiltLibraryStatic(ctx android.LoadHookContext) {
+	libDir, _ := getClangDirs(ctx)
+
+	type props struct {
+		Srcs []string
+	}
+
+	name := strings.Replace(ctx.ModuleName(), "prebuilt_", "", 1)
+
+	p := &props{}
+	p.Srcs = []string{path.Join(libDir, name + ".a")}
+	ctx.AppendProperties(p)
+}
+
 func libfuzzerPrebuiltLibraryStaticFactory() android.Module {
 	module, _ := cc.NewPrebuiltStaticLibrary(android.HostAndDeviceSupported)
 	android.AddLoadHook(module, libfuzzerPrebuiltLibraryStatic)
@@ -153,5 +169,11 @@ func libfuzzerPrebuiltLibraryStaticFactory() android.Module {
 func libClangRtPrebuiltLibrarySharedFactory() android.Module {
 	module, _ := cc.NewPrebuiltSharedLibrary(android.DeviceSupported)
 	android.AddLoadHook(module, libClangRtPrebuiltLibraryShared)
+	return module.Init()
+}
+
+func libClangRtPrebuiltLibraryStaticFactory() android.Module {
+	module, _ := cc.NewPrebuiltStaticLibrary(android.DeviceSupported)
+	android.AddLoadHook(module, libClangRtPrebuiltLibraryStatic)
 	return module.Init()
 }
