@@ -104,8 +104,8 @@ func libfuzzerPrebuiltLibraryStatic(ctx android.LoadHookContext) {
 	p.Export_include_dirs = []string{headerDir}
 	p.Target.Android_arm.Srcs = []string{path.Join(libDir, "arm/libFuzzer.a")}
 	p.Target.Android_arm64.Srcs = []string{path.Join(libDir, "aarch64/libFuzzer.a")}
-	p.Target.Android_mips.Srcs = []string{path.Join(libDir, "mips/libFuzzer.a")}
-	p.Target.Android_mips64.Srcs = []string{path.Join(libDir, "mips64/libFuzzer.a")}
+	p.Target.Android_mips.Srcs = []string{path.Join(libDir, "mipsel/libFuzzer.a")}
+	p.Target.Android_mips64.Srcs = []string{path.Join(libDir, "mips64el/libFuzzer.a")}
 	p.Target.Android_x86.Srcs = []string{path.Join(libDir, "i386/libFuzzer.a")}
 	p.Target.Android_x86_64.Srcs = []string{path.Join(libDir, "x86_64/libFuzzer.a")}
 	ctx.AppendProperties(p)
