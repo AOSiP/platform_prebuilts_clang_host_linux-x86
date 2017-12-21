@@ -23,6 +23,7 @@ llvm_prebuilt_library_static {
 
 llvm_prebuilt_library_static {
     name: "libomp",
+    vendor_available: true,
     sanitize: {
         never: true,
     },
