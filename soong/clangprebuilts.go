@@ -245,9 +245,12 @@ func llvmDarwinFileGroup(ctx android.LoadHookContext) {
 		Srcs []string
 	}
 
-	p := &props{}
-	p.Srcs = []string{lib}
-	ctx.AppendProperties(p)
+	libPath := android.ExistentPathForSource(ctx, ctx.ModuleDir(), lib)
+	if libPath.Valid() {
+		p := &props{}
+		p.Srcs = []string{lib}
+		ctx.AppendProperties(p)
+	}
 }
 
 func llvmPrebuiltLibraryStaticFactory() android.Module {
