@@ -108,7 +108,8 @@ func llvmHostPrebuiltLibraryShared(ctx android.LoadHookContext) {
 	}
 
 	linuxLibrary := path.Join(clangDir, "lib64", getHostLibrary(ctx))
-	darwinFileGroup := strings.Split(moduleName, "_")[1] + "_darwin"
+	darwinFileGroup := strings.TrimSuffix(strings.TrimPrefix(
+		moduleName, "prebuilt_"), "_host") + "_darwin"
 
 	type props struct {
 		Enabled *bool
