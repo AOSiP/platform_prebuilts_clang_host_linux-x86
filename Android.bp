@@ -16,6 +16,7 @@
 
 llvm_prebuilt_library_static {
     name: "libFuzzer",
+    sdk_version: "minimum",
     sanitize: {
         never: true,
     },
@@ -23,6 +24,7 @@ llvm_prebuilt_library_static {
 
 llvm_prebuilt_library_static {
     name: "libomp",
+    sdk_version: "minimum",
     vendor_available: true,
     sanitize: {
         never: true,
@@ -82,8 +84,8 @@ libclang_rt_prebuilt_library_static {
 
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.builtins-x86_64-android",
-    defaults: ["linux_bionic_supported"],
     sdk_version: "minimum",
+    defaults: ["linux_bionic_supported"],
     enabled: false,
     recovery_available: true,
     vendor_available: true,
@@ -100,6 +102,7 @@ libclang_rt_prebuilt_library_static {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.asan-arm-android",
+    sdk_version: "24",
     enabled: false,
     arch: {
         arm: {
@@ -111,6 +114,7 @@ libclang_rt_prebuilt_library_shared {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.asan-aarch64-android",
+    sdk_version: "minimum",
     enabled: false,
     arch: {
         arm64: {
@@ -122,6 +126,7 @@ libclang_rt_prebuilt_library_shared {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.asan-i686-android",
+    sdk_version: "minimum",
     enabled: false,
     arch: {
         x86: {
@@ -133,6 +138,7 @@ libclang_rt_prebuilt_library_shared {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.asan-x86_64-android",
+    sdk_version: "minimum",
     host_supported: true,
     enabled: false,
     arch: {
@@ -204,6 +210,7 @@ libclang_rt_llndk_library {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.ubsan_standalone-arm-android",
+    sdk_version: "24",
     enabled: false,
     vendor_available: true,
     double_loadable: true,
@@ -220,6 +227,7 @@ libclang_rt_prebuilt_library_shared {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.ubsan_standalone-aarch64-android",
+    sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
     double_loadable: true,
@@ -236,6 +244,7 @@ libclang_rt_prebuilt_library_shared {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.ubsan_standalone-i686-android",
+    sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
     double_loadable: true,
@@ -252,6 +261,7 @@ libclang_rt_prebuilt_library_shared {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.ubsan_standalone-x86_64-android",
+    sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
     double_loadable: true,
@@ -268,6 +278,7 @@ libclang_rt_prebuilt_library_shared {
 
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.ubsan_minimal-arm-android",
+    sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
     vndk: {
@@ -282,6 +293,7 @@ libclang_rt_prebuilt_library_static {
 
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.ubsan_minimal-aarch64-android",
+    sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
     vndk: {
@@ -296,6 +308,7 @@ libclang_rt_prebuilt_library_static {
 
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.ubsan_minimal-i686-android",
+    sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
     vndk: {
@@ -310,6 +323,7 @@ libclang_rt_prebuilt_library_static {
 
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.ubsan_minimal-x86_64-android",
+    sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
     vndk: {
@@ -324,6 +338,7 @@ libclang_rt_prebuilt_library_static {
 
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.hwasan_static-aarch64-android",
+    sdk_version: "minimum",
     enabled: false,
     recovery_available: true,
     vendor_available: true,
@@ -336,6 +351,7 @@ libclang_rt_prebuilt_library_static {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.hwasan-aarch64-android",
+    sdk_version: "minimum",
     enabled: false,
     recovery_available: true,
     arch: {
@@ -348,6 +364,7 @@ libclang_rt_prebuilt_library_shared {
 
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.profile-arm-android",
+    sdk_version: "minimum",
     enabled: false,
     recovery_available: true,
     vendor_available: true,
@@ -360,6 +377,7 @@ libclang_rt_prebuilt_library_static {
 
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.profile-aarch64-android",
+    sdk_version: "minimum",
     enabled: false,
     recovery_available: true,
     vendor_available: true,
@@ -372,6 +390,7 @@ libclang_rt_prebuilt_library_static {
 
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.profile-i686-android",
+    sdk_version: "minimum",
     enabled: false,
     recovery_available: true,
     vendor_available: true,
@@ -384,6 +403,7 @@ libclang_rt_prebuilt_library_static {
 
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.profile-x86_64-android",
+    sdk_version: "minimum",
     enabled: false,
     recovery_available: true,
     vendor_available: true,
@@ -396,6 +416,7 @@ libclang_rt_prebuilt_library_static {
 
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.profile-x86_64",
+    sdk_version: "minimum",
     enabled: false,
     host_supported: true,
     target: {
@@ -407,6 +428,7 @@ libclang_rt_prebuilt_library_static {
 
 libclang_rt_prebuilt_library_static {
     name: "libclang_rt.profile-i386",
+    sdk_version: "minimum",
     enabled: false,
     host_supported: true,
     target: {
@@ -418,6 +440,7 @@ libclang_rt_prebuilt_library_static {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.scudo-arm-android",
+    sdk_version: "24",
     enabled: false,
     vendor_available: true,
     vndk: {
@@ -433,6 +456,7 @@ libclang_rt_prebuilt_library_shared {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.scudo-aarch64-android",
+    sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
     vndk: {
@@ -448,6 +472,7 @@ libclang_rt_prebuilt_library_shared {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.scudo-i686-android",
+    sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
     vndk: {
@@ -463,6 +488,7 @@ libclang_rt_prebuilt_library_shared {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.scudo-x86_64-android",
+    sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
     vndk: {
@@ -478,6 +504,7 @@ libclang_rt_prebuilt_library_shared {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.scudo_minimal-arm-android",
+    sdk_version: "24",
     enabled: false,
     vendor_available: true,
     vndk: {
@@ -493,6 +520,7 @@ libclang_rt_prebuilt_library_shared {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.scudo_minimal-aarch64-android",
+    sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
     vndk: {
@@ -508,6 +536,7 @@ libclang_rt_prebuilt_library_shared {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.scudo_minimal-i686-android",
+    sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
     vndk: {
@@ -523,6 +552,7 @@ libclang_rt_prebuilt_library_shared {
 
 libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.scudo_minimal-x86_64-android",
+    sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
     vndk: {
