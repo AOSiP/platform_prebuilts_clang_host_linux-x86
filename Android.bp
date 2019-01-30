@@ -104,6 +104,7 @@ libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.asan-arm-android",
     sdk_version: "24",
     enabled: false,
+    recovery_available: true,
     arch: {
         arm: {
             enabled: true,
@@ -115,6 +116,7 @@ libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.asan-aarch64-android",
     sdk_version: "minimum",
     enabled: false,
+    recovery_available: true,
     arch: {
         arm64: {
             enabled: true,
@@ -126,6 +128,7 @@ libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.asan-i686-android",
     sdk_version: "minimum",
     enabled: false,
+    recovery_available: true,
     arch: {
         x86: {
             enabled: true,
@@ -138,6 +141,7 @@ libclang_rt_prebuilt_library_shared {
     sdk_version: "minimum",
     host_supported: true,
     enabled: false,
+    recovery_available: true,
     arch: {
         x86_64: {
             enabled: true,
@@ -205,6 +209,7 @@ libclang_rt_prebuilt_library_shared {
     sdk_version: "24",
     enabled: false,
     vendor_available: true,
+    recovery_available: true,
     double_loadable: true,
     vndk: {
         enabled: true,
@@ -221,6 +226,7 @@ libclang_rt_prebuilt_library_shared {
     sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
+    recovery_available: true,
     double_loadable: true,
     vndk: {
         enabled: true,
@@ -237,6 +243,7 @@ libclang_rt_prebuilt_library_shared {
     sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
+    recovery_available: true,
     double_loadable: true,
     vndk: {
         enabled: true,
@@ -253,6 +260,7 @@ libclang_rt_prebuilt_library_shared {
     sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
+    recovery_available: true,
     double_loadable: true,
     vndk: {
         enabled: true,
