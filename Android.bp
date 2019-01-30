@@ -109,7 +109,6 @@ libclang_rt_prebuilt_library_shared {
             enabled: true,
         },
     },
-    shared_libs: ["libc++", "libc", "libdl", "liblog", "libm"],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -121,7 +120,6 @@ libclang_rt_prebuilt_library_shared {
             enabled: true,
         },
     },
-    shared_libs: ["libc++", "libc", "libdl", "liblog", "libm"],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -133,7 +131,6 @@ libclang_rt_prebuilt_library_shared {
             enabled: true,
         },
     },
-    shared_libs: ["libc++", "libc", "libdl", "liblog", "libm"],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -149,11 +146,6 @@ libclang_rt_prebuilt_library_shared {
     target: {
         linux_bionic: {
             enabled: true,
-        },
-        android: {
-            // To avoid errors on the host builds, these shared libraries are
-            // only specified in the android targets.
-            shared_libs: ["libc++", "libc", "libdl", "liblog", "libm"],
         },
     },
 }
@@ -222,7 +214,6 @@ libclang_rt_prebuilt_library_shared {
             enabled: true,
         },
     },
-    shared_libs: ["libc++", "libc", "libdl", "liblog"],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -239,7 +230,6 @@ libclang_rt_prebuilt_library_shared {
             enabled: true,
         },
     },
-    shared_libs: ["libc++", "libc", "libdl", "liblog"],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -256,7 +246,6 @@ libclang_rt_prebuilt_library_shared {
             enabled: true,
         },
     },
-    shared_libs: ["libc++", "libc", "libdl", "liblog"],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -273,7 +262,6 @@ libclang_rt_prebuilt_library_shared {
             enabled: true,
         },
     },
-    shared_libs: ["libc++", "libc", "libdl", "liblog"],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -359,7 +347,6 @@ libclang_rt_prebuilt_library_shared {
             enabled: true,
         },
     },
-    shared_libs: ["libc++", "libc", "libdl", "libm"],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -451,7 +438,6 @@ libclang_rt_prebuilt_library_shared {
             enabled: true,
         },
     },
-    shared_libs: ["libc++", "libc", "libdl", "liblog"],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -467,7 +453,6 @@ libclang_rt_prebuilt_library_shared {
             enabled: true,
         },
     },
-    shared_libs: ["libc++", "libc", "libdl", "liblog"],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -483,7 +468,6 @@ libclang_rt_prebuilt_library_shared {
             enabled: true,
         },
     },
-    shared_libs: ["libc++", "libc", "libdl", "liblog"],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -499,7 +483,6 @@ libclang_rt_prebuilt_library_shared {
             enabled: true,
         },
     },
-    shared_libs: ["libc++", "libc", "libdl", "liblog"],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -515,7 +498,6 @@ libclang_rt_prebuilt_library_shared {
             enabled: true,
         },
     },
-    shared_libs: ["libc", "libdl", "liblog"],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -531,7 +513,6 @@ libclang_rt_prebuilt_library_shared {
             enabled: true,
         },
     },
-    shared_libs: ["libc", "libdl", "liblog"],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -547,7 +528,6 @@ libclang_rt_prebuilt_library_shared {
             enabled: true,
         },
     },
-    shared_libs: ["libc", "libdl", "liblog"],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -563,7 +543,6 @@ libclang_rt_prebuilt_library_shared {
             enabled: true,
         },
     },
-    shared_libs: ["libc", "libdl", "liblog"],
 }
 
 // -----------------------------------------------------------------------------
