@@ -37,6 +37,7 @@ libclang_rt_prebuilt_library_static {
     enabled: false,
     recovery_available: true,
     vendor_available: true,
+    native_bridge_supported: true,
     sanitize: {
         never: true,
     },
@@ -54,6 +55,7 @@ libclang_rt_prebuilt_library_static {
     enabled: false,
     recovery_available: true,
     vendor_available: true,
+    native_bridge_supported: true,
     sanitize: {
         never: true,
     },
@@ -71,6 +73,7 @@ libclang_rt_prebuilt_library_static {
     enabled: false,
     recovery_available: true,
     vendor_available: true,
+    native_bridge_supported: true,
     sanitize: {
         never: true,
     },
@@ -89,6 +92,7 @@ libclang_rt_prebuilt_library_static {
     enabled: false,
     recovery_available: true,
     vendor_available: true,
+    native_bridge_supported: true,
     sanitize: {
         never: true,
     },
