@@ -8,7 +8,8 @@ LLVM Users
 ----------
 
 * [**Android Platform**](https://android.googlesource.com/platform/)
-  * Currently clang-r353983b
+  * Currently clang-r353983d
+  * clang-r353983c for Android Q release
   * clang-4691093 for Android P release
   * Look for "ClangDefaultVersion" and/or "clang-" in [build/soong/cc/config/global.go](https://android.googlesource.com/platform/build/soong/+/master/cc/config/global.go/).
     * [Internal cs/ link](https://cs.corp.google.com/android/build/soong/cc/config/global.go?q=ClangDefaultVersion)
@@ -19,14 +20,14 @@ LLVM Users
     * [Internal cs/ link](https://cs.corp.google.com/android/build/soong/cc/config/global.go?q=RSClangVersion)
 
 * [**Android Linux Kernel**](http://go/android-kernel)
-  * Currently clang-r349610
+  * Currently clang-r353983c
   * Look for "clang-" in [4.19 build configs](https://android.googlesource.com/kernel/common/+/android-4.19/build.config.cuttlefish.aarch64).
   * Look for "clang-" in [4.14 build configs](https://android.googlesource.com/kernel/common/+/android-4.14/build.config.cuttlefish.aarch64).
   * Look for "clang-" in [4.9 build configs](https://android.googlesource.com/kernel/common/+/android-4.9/build.config.cuttlefish.aarch64).
   * Internal LLVM developers should look in the partner gerrit for more kernel configurations.
 
 * [**Trusty**](https://source.android.com/security/trusty/)
-  * Currently clang-r353983b
+  * Currently clang-r353983c
   * Look for "clang-" in [vendor/google/aosp/scripts/envsetup.sh](https://android.googlesource.com/trusty/vendor/google/aosp/+/master/scripts/envsetup.sh).
 
 * [**Android Emulator**](https://developer.android.com/studio/run/emulator.html)
@@ -36,7 +37,7 @@ LLVM Users
     * [Internal cs/ link](https://cs.corp.google.com/android/external/qemu/android/build/cmake/toolchain.cmake?q=clang-)
 
 * [**Context Hub Runtime Environment (CHRE)**](https://android.googlesource.com/platform/system/chre/)
-  * Currently clang-r339409b
+  * Currently clang-r353983b
   * Look in [system/chre/build/arch/x86.mk](https://android.googlesource.com/platform/system/chre/+/master/build/arch/x86.mk#12).
 
 * [**Keymaster (system/keymaster) tests**](https://android.googlesource.com/platform/system/keymaster)
@@ -59,6 +60,8 @@ Prebuilt Versions
 * [clang-r349610](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/master/clang-r349610/) - February 2019
 * [clang-r349610b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/master/clang-r349610b/) - February 2019
 * [clang-r353983b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/master/clang-r353983b/) - March 2019
+* [clang-r353983c](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/master/clang-r353983c/) - April 2019
+* [clang-r353983d](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/master/clang-r353983d/) - June 2019
 
 More Information
 ----------------
