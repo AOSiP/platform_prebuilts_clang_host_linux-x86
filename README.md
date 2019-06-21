@@ -26,26 +26,39 @@ LLVM Users
   * Look for "clang-" in [4.9 build configs](https://android.googlesource.com/kernel/common/+/android-4.9/build.config.cuttlefish.aarch64).
   * Internal LLVM developers should look in the partner gerrit for more kernel configurations.
 
+* [**NDK**](https://developer.android.com/ndk)
+  * Currently clang-r349610b
+  * Look for "clang-" in [ndk/toolchains.py](https://android.googlesource.com/platform/ndk/+/refs/heads/master/ndk/toolchains.py)
+
 * [**Trusty**](https://source.android.com/security/trusty/)
   * Currently clang-r353983c
   * Look for "clang-" in [vendor/google/aosp/scripts/envsetup.sh](https://android.googlesource.com/trusty/vendor/google/aosp/+/master/scripts/envsetup.sh).
 
 * [**Android Emulator**](https://developer.android.com/studio/run/emulator.html)
-  * Currently clang-r353983b
+  * Currently clang-r353983d
   * Look for "clang-" in [external/qemu/android/build/cmake/toolchain.cmake](https://android.googlesource.com/platform/external/qemu/+/emu-master-dev/android/build/cmake/toolchain.cmake#25).
     * Note that they work out of the emu-master-dev branch.
     * [Internal cs/ link](https://cs.corp.google.com/android/external/qemu/android/build/cmake/toolchain.cmake?q=clang-)
 
 * [**Context Hub Runtime Environment (CHRE)**](https://android.googlesource.com/platform/system/chre/)
-  * Currently clang-r353983b
+  * Currently clang-r353983d
   * Look in [system/chre/build/arch/x86.mk](https://android.googlesource.com/platform/system/chre/+/master/build/arch/x86.mk#12).
 
 * [**Keymaster (system/keymaster) tests**](https://android.googlesource.com/platform/system/keymaster)
-  * Currently clang-r339409b
+  * Currently clang-r339409d
   * Look for "clang-" in system/keymaster/Makefile
     * [Outdated AOSP sources](https://android.googlesource.com/platform/system/keymaster/+/master/Makefile)
     * [Internal sources](https://googleplex-android.googlesource.com/platform/system/keymaster/+/master/Makefile)
     * [Internal cs/ link](https://cs.corp.google.com/android/system/keymaster/Makefile?q=clang-)
+
+* [**Clang Tools**](https://android.googlesource.com/platform/prebuilts/clang-tools/)
+  * Currently clang-r353983d
+  * Look for "clang-r" in [build-prebuilts.sh](https://android.googlesource.com/platform/prebuilts/clang-tools/+/refs/heads/master/build-prebuilts.sh)
+
+* **Stage 1 compiler**
+  * Currently clang-r353983d
+  * Look for "clang-r" in [toolchain/llvm_android/build.py](https://android.googlesource.com/toolchain/llvm_android/+/refs/heads/master/build.py)
+  * Note the chicken & egg paradox of a self hosting bootstrapping compiler; this can only be updated AFTER a new prebuilt is checked in.
 
 
 Prebuilt Versions
