@@ -51,6 +51,10 @@ LLVM Users
     * [Internal sources](https://googleplex-android.googlesource.com/platform/system/keymaster/+/master/Makefile)
     * [Internal cs/ link](https://cs.corp.google.com/android/system/keymaster/Makefile?q=clang-)
 
+* [**OpenJDK (jdk/build)**](https://android.googlesource.com/toolchain/jdk/build/)
+  * Currently clang-r353983d
+  * Look for "clang-" in [build-openjdk-darwin.sh](https://android.googlesource.com/toolchain/jdk/build/+/refs/heads/master/build-openjdk-darwin.sh)
+
 * [**Clang Tools**](https://android.googlesource.com/platform/prebuilts/clang-tools/)
   * Currently clang-r353983d
   * Look for "clang-r" in [build-prebuilts.sh](https://android.googlesource.com/platform/prebuilts/clang-tools/+/refs/heads/master/build-prebuilts.sh)
