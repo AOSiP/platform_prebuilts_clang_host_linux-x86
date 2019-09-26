@@ -80,6 +80,7 @@ Prebuilt Versions
 * [clang-r353983c](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/master/clang-r353983c/) - April 2019
 * [clang-r353983d](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/master/clang-r353983d/) - June 2019
 * [clang-r365631b](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/master/clang-r365631b/) - September 2019
+* [clang-r365631c](https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+/refs/heads/master/clang-r365631c/) - September 2019
 
 More Information
 ----------------
@@ -87,3 +88,4 @@ More Information
 We have a public mailing list that you can subscribe to:
 [android-llvm@googlegroups.com](https://groups.google.com/forum/#!forum/android-llvm)
 
+See also our [release notes](RELEASE_NOTES.md).
