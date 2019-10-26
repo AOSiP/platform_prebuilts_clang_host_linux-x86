@@ -21,9 +21,9 @@ LLVM Users
 
 * [**Android Linux Kernel**](http://go/android-kernel)
   * Currently clang-r365631c
-  * Look for "clang-" in [4.19 build configs](https://android.googlesource.com/kernel/common/+/android-4.19/build.config.cuttlefish.aarch64).
-  * Look for "clang-" in [4.14 build configs](https://android.googlesource.com/kernel/common/+/android-4.14/build.config.cuttlefish.aarch64).
-  * Look for "clang-" in [4.9 build configs](https://android.googlesource.com/kernel/common/+/android-4.9/build.config.cuttlefish.aarch64).
+  * Look for "clang-" in [4.19 build configs](https://android.googlesource.com/kernel/common/+/android-4.19/build.config.common).
+  * Look for "clang-" in [4.14 build configs](https://android.googlesource.com/kernel/common/+/android-4.14/build.config.common).
+  * Look for "clang-" in [4.9 build configs](https://android.googlesource.com/kernel/common/+/android-4.9-q/build.config.common).
   * Internal LLVM developers should look in the partner gerrit for more kernel configurations.
 
 * [**NDK**](https://developer.android.com/ndk)
