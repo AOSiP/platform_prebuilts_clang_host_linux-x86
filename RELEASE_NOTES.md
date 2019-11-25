@@ -32,6 +32,7 @@
 - r373022 Always rebuild a DeclRefExpr if its FoundDecl would change.
 - r373035 hwasan: Compatibility fixes for short granules.
 - r373255 ELF: Don't merge SHF_LINK_ORDER sections for different output sections in relocatable links.
+- r373929 Fix Calling Convention through aliases
 - r375166 libhwasan initialisation include kernel syscall ABI relaxation
 - r375298 hwasan: Add missing SANITIZER_INTERFACE_ATTRIBUTE on __hwasan_personality_wrapper.
 ### Notes
@@ -51,6 +52,9 @@ now for for C code. `__attribute__((__fallthrough__))` should be used to
 explicitly specify intentional fallthrough to silence the warning.
 
 Lots of cherry picks are fixes for LLDB and HWASAN.
+
+r373035 is slightly different from upstream due to not additionally cherry
+picking r372338.
 ### Created
 Nov 11 2019
 
