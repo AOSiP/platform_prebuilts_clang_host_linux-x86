@@ -59,6 +59,10 @@ LLVM Users
   * Currently clang-r365631b
   * Look for "clang-r" in [envsetup.sh](https://android.googlesource.com/platform/development/+/refs/heads/master/vndk/tools/header-checker/android/envsetup.sh)
 
+* **Android Rust**
+  * Currently clang-r370808
+  * Look for "CLANG_REVISION" in [paths.py](https://android.googlesource.com/toolchain/android_rust/+/refs/heads/master/paths.py)
+
 * **Stage 1 compiler**
   * Currently clang-r365631b
   * Look for "clang-r" in [toolchain/llvm_android/build.py](https://android.googlesource.com/toolchain/llvm_android/+/refs/heads/master/build.py)
