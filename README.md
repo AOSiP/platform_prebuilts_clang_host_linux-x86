@@ -53,7 +53,7 @@ LLVM Users
     * [Internal cs/ link](https://cs.corp.google.com/android/system/keymaster/Makefile?q=clang-)
 
 * [**OpenJDK (jdk/build)**](https://android.googlesource.com/toolchain/jdk/build/)
-  * Currently clang-r365631b
+  * Currently clang-r353983c
   * Look for "clang-" in [build-openjdk-darwin.sh](https://android.googlesource.com/toolchain/jdk/build/+/refs/heads/master/build-openjdk-darwin.sh)
 
 * [**Clang Tools**](https://android.googlesource.com/platform/prebuilts/clang-tools/)
