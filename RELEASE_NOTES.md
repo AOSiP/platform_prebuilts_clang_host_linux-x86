@@ -57,6 +57,10 @@ Lots of cherry picks are fixes for LLDB and HWASAN.
 
 r373035 is slightly different from upstream due to not additionally cherry
 picking r372338.
+
+Writes to variables declared const through casts to non-const pointers
+(explicitly undefined behavior) are now removed. The next release of Clang adds
+UBSAN support for catching such mistakes.
 ### Created
 Nov 11 2019
 
