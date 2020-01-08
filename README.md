@@ -36,7 +36,7 @@ LLVM Users
   * Look for "clang-" in [vendor/google/aosp/scripts/envsetup.sh](https://android.googlesource.com/trusty/vendor/google/aosp/+/master/scripts/envsetup.sh).
 
 * [**Android Emulator**](https://developer.android.com/studio/run/emulator.html)
-  * Currently clang-r365631b
+  * Currently clang-r365631c
   * Look for "clang-" in [external/qemu/android/build/cmake/toolchain.cmake](https://android.googlesource.com/platform/external/qemu/+/emu-master-dev/android/build/cmake/toolchain.cmake#25).
     * Note that they work out of the emu-master-dev branch.
     * [Internal cs/ link](https://cs.corp.google.com/android/external/qemu/android/build/cmake/toolchain.cmake?q=clang-)
@@ -46,7 +46,7 @@ LLVM Users
   * Look in [system/chre/build/arch/x86.mk](https://android.googlesource.com/platform/system/chre/+/master/build/arch/x86.mk#12).
 
 * [**Keymaster (system/keymaster) tests**](https://android.googlesource.com/platform/system/keymaster)
-  * Currently clang-r353983d
+  * Currently clang-r370808
   * Look for "clang-" in system/keymaster/Makefile
     * [Outdated AOSP sources](https://android.googlesource.com/platform/system/keymaster/+/master/Makefile)
     * [Internal sources](https://googleplex-android.googlesource.com/platform/system/keymaster/+/master/Makefile)
