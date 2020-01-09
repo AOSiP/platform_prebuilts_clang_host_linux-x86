@@ -65,9 +65,13 @@ LLVM Users
   * Look for "CLANG_REVISION" in [paths.py](https://android.googlesource.com/toolchain/android_rust/+/refs/heads/master/paths.py)
 
 * **Stage 1 compiler**
-  * Currently clang-r365631b
+  * Currently clang-r370808
   * Look for "clang-r" in [toolchain/llvm_android/build.py](https://android.googlesource.com/toolchain/llvm_android/+/refs/heads/master/build.py)
   * Note the chicken & egg paradox of a self hosting bootstrapping compiler; this can only be updated AFTER a new prebuilt is checked in.
+
+* **Beagle-x15 HOSTCC**
+  * Currently clang-r370808
+  * Look for "clang-r" in symlink of cc in [device/ti/beagle-x15/hostcc/cc](https://android.googlesource.com/device/ti/beagle-x15/+/refs/heads/master/hostcc/)
 
 
 Prebuilt Versions
