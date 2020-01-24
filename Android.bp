@@ -47,6 +47,10 @@ libclang_rt_prebuilt_library_static {
         },
     },
     stl: "none",
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -65,6 +69,10 @@ libclang_rt_prebuilt_library_static {
         },
     },
     stl: "none",
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -83,6 +91,10 @@ libclang_rt_prebuilt_library_static {
         },
     },
     stl: "none",
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -102,6 +114,10 @@ libclang_rt_prebuilt_library_static {
         },
     },
     stl: "none",
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -117,6 +133,10 @@ libclang_rt_prebuilt_library_shared {
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
     has_stubs: true,
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -132,6 +152,10 @@ libclang_rt_prebuilt_library_shared {
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
     has_stubs: true,
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -147,6 +171,10 @@ libclang_rt_prebuilt_library_shared {
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
     has_stubs: true,
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -168,6 +196,10 @@ libclang_rt_prebuilt_library_shared {
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
     has_stubs: true,
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_llndk_library {
@@ -240,6 +272,10 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -258,6 +294,10 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -276,6 +316,10 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -294,6 +338,10 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -306,6 +354,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -318,6 +370,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -330,6 +386,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -342,6 +402,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -355,6 +419,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -369,6 +437,10 @@ libclang_rt_prebuilt_library_shared {
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
     has_stubs: true,
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -382,6 +454,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -395,6 +471,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -408,6 +488,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -421,6 +505,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -433,6 +521,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -445,6 +537,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -457,6 +553,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -469,6 +569,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -482,6 +586,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -495,6 +603,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -508,6 +620,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -521,6 +637,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -534,6 +654,10 @@ libclang_rt_prebuilt_library_static {
         },
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -550,6 +674,10 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -566,6 +694,10 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -582,6 +714,10 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -598,6 +734,10 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     check_elf_files: false,  // Bypass circular dependency between libc++
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -612,6 +752,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -626,6 +770,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -640,6 +788,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -654,6 +806,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -670,6 +826,10 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     shared_libs: ["libc", "libdl", "liblog"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -686,6 +846,10 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     shared_libs: ["libc", "libdl", "liblog"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -702,6 +866,10 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     shared_libs: ["libc", "libdl", "liblog"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_shared {
@@ -718,6 +886,10 @@ libclang_rt_prebuilt_library_shared {
         },
     },
     shared_libs: ["libc", "libdl", "liblog"],
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -732,6 +904,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -746,6 +922,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -760,6 +940,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 libclang_rt_prebuilt_library_static {
@@ -774,6 +958,10 @@ libclang_rt_prebuilt_library_static {
             enabled: true,
         },
     },
+    apex_available: [
+        "//apex_available:anyapex",
+        "//apex_available:platform",
+    ],
 }
 
 // -----------------------------------------------------------------------------
