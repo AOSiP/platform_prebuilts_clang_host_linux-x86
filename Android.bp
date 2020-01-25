@@ -35,6 +35,7 @@ libclang_rt_prebuilt_library_static {
     name: "libclang_rt.builtins-arm-android",
     sdk_version: "minimum",
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     native_bridge_supported: true,
@@ -57,6 +58,7 @@ libclang_rt_prebuilt_library_static {
     name: "libclang_rt.builtins-aarch64-android",
     sdk_version: "minimum",
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     native_bridge_supported: true,
@@ -79,6 +81,7 @@ libclang_rt_prebuilt_library_static {
     name: "libclang_rt.builtins-i686-android",
     sdk_version: "minimum",
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     native_bridge_supported: true,
@@ -102,6 +105,7 @@ libclang_rt_prebuilt_library_static {
     sdk_version: "minimum",
     defaults: ["linux_bionic_supported"],
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     native_bridge_supported: true,
@@ -124,6 +128,7 @@ libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.asan-arm-android",
     sdk_version: "24",
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     native_bridge_supported: true,
     arch: {
@@ -143,6 +148,7 @@ libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.asan-aarch64-android",
     sdk_version: "minimum",
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     native_bridge_supported: true,
     arch: {
@@ -162,6 +168,7 @@ libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.asan-i686-android",
     sdk_version: "minimum",
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     native_bridge_supported: true,
     arch: {
@@ -182,6 +189,7 @@ libclang_rt_prebuilt_library_shared {
     sdk_version: "minimum",
     host_supported: true,
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     native_bridge_supported: true,
     arch: {
@@ -412,6 +420,7 @@ libclang_rt_prebuilt_library_static {
     name: "libclang_rt.hwasan_static-aarch64-android",
     sdk_version: "minimum",
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     arch: {
@@ -429,6 +438,7 @@ libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.hwasan-aarch64-android",
     sdk_version: "minimum",
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     arch: {
         arm64: {
@@ -447,6 +457,7 @@ libclang_rt_prebuilt_library_static {
     name: "libclang_rt.profile-arm-android",
     sdk_version: "minimum",
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     arch: {
@@ -464,6 +475,7 @@ libclang_rt_prebuilt_library_static {
     name: "libclang_rt.profile-aarch64-android",
     sdk_version: "minimum",
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     arch: {
@@ -481,6 +493,7 @@ libclang_rt_prebuilt_library_static {
     name: "libclang_rt.profile-i686-android",
     sdk_version: "minimum",
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     arch: {
@@ -498,6 +511,7 @@ libclang_rt_prebuilt_library_static {
     name: "libclang_rt.profile-x86_64-android",
     sdk_version: "minimum",
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     arch: {
@@ -579,6 +593,7 @@ libclang_rt_prebuilt_library_static {
     name: "libclang_rt.fuzzer-arm-android",
     sdk_version: "minimum",
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     arch: {
@@ -596,6 +611,7 @@ libclang_rt_prebuilt_library_static {
     name: "libclang_rt.fuzzer-aarch64-android",
     sdk_version: "minimum",
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     arch: {
@@ -613,6 +629,7 @@ libclang_rt_prebuilt_library_static {
     name: "libclang_rt.fuzzer-i686-android",
     sdk_version: "minimum",
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     arch: {
@@ -630,6 +647,7 @@ libclang_rt_prebuilt_library_static {
     name: "libclang_rt.fuzzer-x86_64-android",
     sdk_version: "minimum",
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
     arch: {
