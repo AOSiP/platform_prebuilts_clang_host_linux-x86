@@ -438,6 +438,7 @@ libclang_rt_prebuilt_library_shared {
     name: "libclang_rt.hwasan-aarch64-android",
     sdk_version: "minimum",
     enabled: false,
+    ramdisk_available: true,
     recovery_available: true,
     arch: {
         arm64: {
