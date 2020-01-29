@@ -269,6 +269,7 @@ libclang_rt_prebuilt_library_shared {
     sdk_version: "24",
     enabled: false,
     vendor_available: true,
+    ramdisk_available: true,
     recovery_available: true,
     double_loadable: true,
     vndk: {
@@ -291,6 +292,7 @@ libclang_rt_prebuilt_library_shared {
     sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
+    ramdisk_available: true,
     recovery_available: true,
     double_loadable: true,
     vndk: {
@@ -313,6 +315,7 @@ libclang_rt_prebuilt_library_shared {
     sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
+    ramdisk_available: true,
     recovery_available: true,
     double_loadable: true,
     vndk: {
@@ -335,6 +338,7 @@ libclang_rt_prebuilt_library_shared {
     sdk_version: "minimum",
     enabled: false,
     vendor_available: true,
+    ramdisk_available: true,
     recovery_available: true,
     double_loadable: true,
     vndk: {
@@ -546,6 +550,9 @@ libclang_rt_prebuilt_library_static {
     sdk_version: "minimum",
     enabled: false,
     host_supported: true,
+    sanitize: {
+        never: true,
+    },
     target: {
         linux_glibc_x86_64: {
             enabled: true,
@@ -562,6 +569,9 @@ libclang_rt_prebuilt_library_static {
     sdk_version: "minimum",
     enabled: false,
     host_supported: true,
+    sanitize: {
+        never: true,
+    },
     target: {
         linux_glibc_x86: {
             enabled: true,
@@ -596,6 +606,9 @@ libclang_rt_prebuilt_library_static {
     ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
+    sanitize: {
+        never: true,
+    },
     arch: {
         arm: {
             enabled: true,
@@ -614,6 +627,9 @@ libclang_rt_prebuilt_library_static {
     ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
+    sanitize: {
+        never: true,
+    },
     arch: {
         arm64: {
             enabled: true,
@@ -632,6 +648,9 @@ libclang_rt_prebuilt_library_static {
     ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
+    sanitize: {
+        never: true,
+    },
     arch: {
         x86: {
             enabled: true,
@@ -650,6 +669,9 @@ libclang_rt_prebuilt_library_static {
     ramdisk_available: true,
     recovery_available: true,
     vendor_available: true,
+    sanitize: {
+        never: true,
+    },
     arch: {
         x86_64: {
             enabled: true,
