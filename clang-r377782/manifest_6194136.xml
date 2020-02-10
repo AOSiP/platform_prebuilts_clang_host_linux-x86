@@ -9,10 +9,10 @@
   <remote fetch=".." name="aosp" review="https://android-review.googlesource.com/" />
   <default remote="aosp" revision="master" sync-j="4" />
   <!-- Core LLVM toolchain components -->
-  <project name="platform/bionic" path="bionic" revision="a399ede44ec4aa81e4b4cf655496e4618e94ad62" upstream="master" />
+  <project name="platform/bionic" path="bionic" revision="6ab6025981c7312c51da0f1529c2c996e36e3586" upstream="master" />
   <project name="toolchain/binutils" path="toolchain/binutils" revision="6f40a53b210eb1743939972b8a7dbdccb606f1f3" upstream="master" />
   <project name="toolchain/llvm-project" path="toolchain/llvm-project" revision="0cb1afdb060d6619a9837ab6866cf4adf2336416" upstream="master-legacy" />
-  <project name="toolchain/llvm_android" path="toolchain/llvm_android" revision="2a7f95bd279afcaf2a2d8bc93f764ec2654529b1" upstream="master" />
+  <project name="toolchain/llvm_android" path="toolchain/llvm_android" revision="967f2b6dbcf253361180136d104b6bba61a90d7b" upstream="master" />
   <!-- Android/ChromeOS shared toolchain-utils -->
   <project name="platform/external/toolchain-utils" path="external/toolchain-utils" revision="928fba9d7416ccbbeb8fc2bfccf5b9bfd8906444" upstream="master" />
   <!-- Binutils/gcc toolchains -->
@@ -48,9 +48,9 @@
   <!-- build-tools project for python3 -->
   <project clone-depth="1" name="platform/prebuilts/build-tools" path="prebuilts/build-tools" revision="864ab14cac6360dad83230ee9647c3a1247ffa90" upstream="master" />
   <!-- Prebuilts (for ease of updating) -->
-  <project name="platform/prebuilts/clang/host/darwin-x86" path="prebuilts/clang/host/darwin-x86" revision="39e879aa63c1af9b38b67982b8234200b1da3c62" upstream="master" />
-  <project name="platform/prebuilts/clang/host/linux-x86" path="prebuilts/clang/host/linux-x86" revision="1b222e3e43d8ceb2cc772307991cc6913f899e73" upstream="master" />
-  <project name="platform/prebuilts/clang/host/windows-x86" path="prebuilts/clang/host/windows-x86" revision="36f0617db45dac1fdab2994fdcfbd8253473de2f" upstream="master" />
+  <project name="platform/prebuilts/clang/host/darwin-x86" path="prebuilts/clang/host/darwin-x86" revision="f795e66c89dfbb1a70f1c79a02a3cffa33fdbdd3" upstream="master" />
+  <project name="platform/prebuilts/clang/host/linux-x86" path="prebuilts/clang/host/linux-x86" revision="72736ab7205779ef81fe7297986d2bc571061668" upstream="master" />
+  <project name="platform/prebuilts/clang/host/windows-x86" path="prebuilts/clang/host/windows-x86" revision="aa5238aabfa8ef3d5bb3115b905a5bd2f28ad5a5" upstream="master" />
   <!-- NDK headers/libraries -->
   <project name="toolchain/prebuilts/ndk/r20" path="toolchain/prebuilts/ndk/r20" revision="090bbcaa361eb158e8bfc5e6950081cb9679e350" upstream="master" />
 </manifest>
